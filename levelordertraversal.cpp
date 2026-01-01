@@ -27,8 +27,10 @@ void levelOrder(Node* root) {
         for (int i = 0; i < levelSize; i++) {
             Node* curr = q.front();
             q.pop();
+            if(i==(levelSize-1)){
+                level.push_back(curr->data);
+}
             
-            level.push_back(curr->data);
             
             if (curr->left != nullptr)
                 q.push(curr->left);
